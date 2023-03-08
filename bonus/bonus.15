@@ -1,0 +1,28 @@
+import json
+
+with open("questions.json", 'r') as file:
+    content = file.read()
+
+data = json.loads(content)
+
+for question in data:
+    print(question["question"])
+    for index,alternates in enumerate(question["alternates"]):
+        print (index+1 ,"-",alternates)
+    user_choice = int(input("enter the corrsct option : "))
+    question['user_choice']= user_choice
+
+score = 0
+
+for index ,question in enumerate(data):
+    if user_choice == question["correct_answer"]:
+        score += 1
+        result = "correct answer"
+    else :
+        score = score
+        result = "wrong answer"
+
+    message = f"{index+1}{result } - your answer : {question['user_choice']}" \
+              f"correct answer = {question['correct_answer']}"
+    print(message)
+
