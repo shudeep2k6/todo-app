@@ -5,7 +5,6 @@ def todos_list(filepath="todos.txt"):
     with open(filepath, 'r') as file:
         todos = file.readlines()
     return todos
-danceeeee
 
 
 def write_todos(todos_arg, filepath="todos.txt"):
