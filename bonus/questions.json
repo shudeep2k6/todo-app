@@ -1,0 +1,8 @@
+[{"question" : "dolpins aree",
+  "alternates" : ["animal " , "bird " , "mammel "],
+  "correct_answer" : 3},
+  {"question" :  "earth surface is mostly covered by",
+   "alternates" :  ["water" , "land"],
+  "correct_answer" : 1}
+
+]
